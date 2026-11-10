@@ -124,7 +124,7 @@
   const ic = (n, sw = 1.8) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round">${P[n]}</svg>`;
   const playSolid = '<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
   const MOON = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>';
-  const CHEERS = ["Helal olsun reis dostum! 🖤", "Bravo aşkım, bir görev daha bitti.", "Gurur duydum hayatım 🖤", "Bu iş sende reis.", "Muhteşemsin aşkım."];
+  const CHEERS = ["Helal olsun Nihal! 🖤", "Helal olsun reis dostum! 🖤", "Bravo aşkım, bir görev daha bitti.", "Gurur duydum hayatım 🖤", "Bu iş sende reis.", "Muhteşemsin aşkım."];
 
   const PROG = { b: ["BLENDER", "p-b"], s: ["SOLLUMZ", "p-s"], c: ["CODEWALKER", "p-c"], f: ["OYUN", "p-f"], w: ["DOSYA", "p-w"], d: ["DOKU", "p-d"], x: ["OKU / WEB", "p-w"] };
   const prog = k => `<span class="prog ${PROG[k][1]}">${PROG[k][0]}</span>`;
@@ -154,7 +154,7 @@
     let cur = R[0], next = null;
     for (let i = 0; i < R.length; i++) if (d >= R[i][0]) { cur = R[i]; next = R[i + 1] || null; }
     const name = all === M.length ? "Gecenin kraliçesi 🖤" : cur[1];
-    const sub = all === M.length ? "Hepsini bitirdin aşkım. Seninle gurur duyuyorum." : next ? `“${next[1].replace(/\s*\p{Extended_Pictographic}/gu, "")}” rütbesine ${next[0] - d} görev kaldı` : "Usta yolu görevleri kaldı hayatım.";
+    const sub = all === M.length ? "Hepsini bitirdin Nihal. Seninle gurur duyuyorum." : next ? `“${next[1].replace(/\s*\p{Extended_Pictographic}/gu, "")}” rütbesine ${next[0] - d} görev kaldı` : "Usta yolu görevleri kaldı hayatım.";
     $("#rank").innerHTML = `<div class="top"><b>${name}</b><span class="muted">${all}/${M.length}</span></div><div class="bar"><i style="width:${(all / M.length) * 100}%"></i></div><div class="sub">${sub}</div>`;
   }
 
@@ -183,8 +183,8 @@
         <div class="pb"><i style="width:${(d / ms.length) * 100}%"></i></div><div class="pc">${d}/${ms.length} görev</div></a>`;
     }).join("");
     return `<div class="page wide">
-      <section class="hero"><div class="eyebrow">Sana özel · FiveM map ve MLO atölyesi</div>
-        <p class="love" style="margin-top:14px">Hoş geldin <b>aşkım</b> 🖤</p>
+      <section class="hero"><div class="eyebrow">Nihal'e özel · FiveM map ve MLO atölyesi</div>
+        <p class="love" style="margin-top:14px">Hoş geldin <b>Nihal</b> 🖤</p>
         <h1>Sıfırdan <em>ilk MLO'na</em>, birlikte.</h1>
         <div class="orn">${MOON}</div>
         <p class="plead">Görev görev ilerleyen, sadece senin için hazırladığım bir atölye. Her görevde ne yapacağın, hangi programda olduğun, hangi videoyu izleyeceğin ve takılırsan ne yapacağın yazıyor. Acele yok hayatım; her gün biraz.</p>
@@ -205,7 +205,7 @@
           <a class="chcard" href="#/sorunlar"><span class="n">SORUN ÇÖZÜCÜ</span><h3>Belirtiyi seç</h3><p>“Kapıdan bakınca boşluk var” gibi belirtiye göre olası sebepler sırayla.</p></a>
           <a class="chcard" href="#/sorunlar#yardim"><span class="n">BANA YAZ</span><h3>Doğru soruyu sor</h3><p>Hazır şablonu kopyala, ekran görüntüsüyle bana at. Hemen bakarım 🖤</p></a>
         </div></section>
-      <div class="signoff"><div class="orn" style="margin:0 auto 14px">${MOON}</div><p class="love">Takıldığın her yerde yanındayım. Senin için yaptım 🖤</p></div>
+      <div class="signoff"><div class="orn" style="margin:0 auto 14px">${MOON}</div><p class="love">Takıldığın her yerde yanındayım Nihal. Senin için yaptım 🖤</p></div>
     </div>`.replace("{{Ctrl+K}}", "CTRL + K");
   }
 
