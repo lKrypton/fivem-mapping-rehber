@@ -4,30 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MLO Atölyesi</title>
-<meta name="description" content="Sıfırdan FiveM map ve MLO: Blender, Sollumz ve CodeWalker ile görev görev, Türkçe.">
-<meta name="theme-color" content="#0e0f11">
+<meta name="description" content="Sana özel, sıfırdan FiveM map ve MLO atölyesi: Blender, Sollumz ve CodeWalker ile görev görev.">
+<meta name="theme-color" content="#0c0a0f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Grenze+Gotisch:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f5b83d'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='800' font-size='14' text-anchor='middle' fill='%231a1305'%3EMA%3C/text%3E%3C/svg%3E">
-<script>try{var t=localStorage.getItem('mloa-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e24e6b'/%3E%3Cstop offset='1' stop-color='%23a585ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M23 19.2A8.5 8.5 0 1 1 12.8 9a7 7 0 0 0 10.2 10.2z' fill='%23fff'/%3E%3C/svg%3E">
+<script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('mloa-theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 </head>
 <body>
 <div class="topbar">
   <button class="iconbtn" id="menuBtn" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-  <a class="brand" href="#/"><span class="logo">MA</span><span><b>MLO Atölyesi</b></span></a>
+  <a class="brand" href="#/"><span class="logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span><span><b>MLO Atölyesi</b></span></a>
   <button class="iconbtn" data-search aria-label="Ara"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
 </div>
 <div class="scrim" id="scrim"></div>
 <div class="app">
   <aside class="side" id="side">
-    <a class="brand" href="#/"><span class="logo">MA</span><span><b>MLO Atölyesi</b><small>Sıfırdan FiveM mapping</small></span></a>
-    <button class="searchbtn" data-search><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Nasıl yaparım? Ara…</span><kbd>Ctrl K</kbd></button>
+    <a class="brand" href="#/"><span class="logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span><span><b>MLO Atölyesi</b><small>sana özel 🖤</small></span></a>
+    <button class="searchbtn" data-search><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Neyi merak ettin?</span><kbd>Ctrl K</kbd></button>
     <nav class="nav" id="nav"></nav>
     <div class="rank" id="rank"></div>
     <div class="foot">
       <button class="iconbtn" id="themeBtn" title="Açık / koyu tema"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>Tema</button>
+      <button class="iconbtn" data-trtoggle title="Buton adlarının Türkçesini göster / gizle">TR <b>açık</b></button>
       <a class="iconbtn" href="https://github.com/lKrypton/fivem-mapping-rehber" target="_blank" rel="noopener" title="Kaynak kodu"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a>
     </div>
   </aside>
@@ -43,7 +44,7 @@
 
 <div class="modal sbox" id="smodal" role="dialog" aria-modal="true" aria-label="Arama">
   <div class="panel">
-    <div class="inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sinput" placeholder="Örn: kapı açmak, doku pembe, portal, ölçek…" autocomplete="off"><kbd>Esc</kbd></div>
+    <div class="inp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sinput" placeholder="Neyi merak ettin aşkım? Örn: kapı aç, doku pembe…" autocomplete="off"><kbd>Esc</kbd></div>
     <div class="sres" id="sres"></div>
   </div>
 </div>
@@ -52,6 +53,7 @@
 <script src="assets/data-missions.js"></script>
 <script src="assets/data-ref.js"></script>
 <script src="assets/diagrams.js"></script>
+<script src="assets/basics.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

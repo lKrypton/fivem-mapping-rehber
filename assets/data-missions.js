@@ -2,13 +2,13 @@
    Adım programı (in): b Blender, s Sollumz, c CodeWalker, f Oyun/FiveM, w Windows/dosya, d Doku programı, x Okuma/Web */
 
 window.CHAPTERS = [
-  { id: 0, title: "Atölyeyi kur", sub: "Programlar, klasörler ve test sunucusu. Bir kere yapılır." },
-  { id: 1, title: "Blender'a alış", sub: "Arayüz, temel hareketler, ölçü, ilk masa ve ilk oda." },
+  { id: 0, title: "Atölyeyi kur", sub: "Programlar, klasörler ve test sunucusu. Bir kere yapılır, sonra unutursun reis dostum." },
+  { id: 1, title: "Blender'a alış", sub: "Arayüz, temel hareketler, ölçü, ilk masa ve ilk oda. Elin alışınca gerisi kolay aşkım." },
   { id: 2, title: "Oyunun içine bak", sub: "CodeWalker ile GTA dünyasını gez, bir modeli Blender'a al ve geri gönder." },
-  { id: 3, title: "İlk propun", sub: "Kendi objene doku, collision ve kimlik kartı ver." },
-  { id: 4, title: "Haritaya koy", sub: "Ymap ile yerleştir, resource yap, oyunda gör." },
-  { id: 5, title: "İlk MLO", sub: "İçine girilen bina: oda, portal, limbo, eşya." },
-  { id: 6, title: "Usta yolu", sub: "Işık, kapı, LOD, ses, titreme ve büyük proje. Temel bitince." }
+  { id: 3, title: "İlk propun", sub: "Kendi objene doku, collision ve kimlik kartı ver. İlk eserin, hayatım." },
+  { id: 4, title: "Haritaya koy", sub: "Ymap ile yerleştir, resource yap, oyunda gör. Yaptığını ilk kez oyunda göreceksin reis dostum." },
+  { id: 5, title: "İlk MLO", sub: "İçine girilen bina: oda, portal, limbo, eşya. En güzel kısım aşkım." },
+  { id: 6, title: "Usta yolu", sub: "Işık, kapı, LOD, ses, titreme ve büyük proje. Temel bitince, acele yok hayatım." }
 ];
 
 window.MISSIONS = [
@@ -24,6 +24,7 @@ window.MISSIONS = [
   ],
   dg: ["pipeline", "files"],
   steps: [
+    { in: "x", t: "Hiç 3D bilmiyorsan önce [Temel kavramlar](#/temel) sayfasını oku. 15 dakika sürer; sitedeki işaretleri ve 3D'nin temel fikirlerini resimli anlatır." },
     { in: "x", t: "Yukarıdaki akışı soldan sağa oku. Her kutu bir program, altındaki kodlar o adımda çıkan dosyalar." },
     { in: "x", t: "Dosya şemasında bir masa düşün: `ymap` masanın **nerede** durduğunu, `ytyp` masanın **ne** olduğunu, `ydr` **görüntüsünü**, `ybn` **çarpışmasını** tutar." },
     { in: "x", t: "[Sözlük](#/sozluk) sayfasına bir göz at. Ezberlemene gerek yok, takıldıkça döneceksin." },
@@ -31,6 +32,7 @@ window.MISSIONS = [
   ],
   vids: [["GgZ82sue3kM", 0, "Serinin ilk bölümü: araçlar ve genel akış. FiveM'in resmi rehberinin video hali."]],
   done: [
+    "Temel kavramlar sayfasını okudum; sitedeki işaretleri biliyorum.",
     "Blender, Sollumz, CodeWalker ve FiveM'in ne iş yaptığını birer cümleyle söyleyebiliyorum.",
     "ymap, ytyp, ydr ve ybn arasındaki farkı biliyorum.",
     "Aramayı açmayı biliyorum."
